@@ -40,9 +40,12 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Access_DB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Database.h">
+    <ClInclude Include="Access_DB.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

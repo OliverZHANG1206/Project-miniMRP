@@ -159,13 +159,14 @@
     <QtRcc Include="Project_Qt_Access.qrc" />
     <QtUic Include="Project_Qt_Access.ui" />
     <QtMoc Include="Project_Qt_Access.h" />
+    <ClCompile Include="Access_DB.cpp" />
     <ClCompile Include="Project_Qt_Access.cpp" />
     <ClCompile Include="main.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Database.h" />
+    <ClInclude Include="Access_DB.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

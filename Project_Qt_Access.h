@@ -1,5 +1,7 @@
 #pragma once
 #include <QtWidgets/QMainWindow>
+
+#include "Access_DB.h"
 #include "ui_Project_Qt_Access.h"
 
 class Project_Qt_Access : public QMainWindow
@@ -14,6 +16,6 @@ class Project_Qt_Access : public QMainWindow
         Project_Qt_Access(QWidget *parent = Q_NULLPTR);
 
     private:
+        AdoAccess db;
         Ui::Project_Qt_AccessClass ui;
-
 };

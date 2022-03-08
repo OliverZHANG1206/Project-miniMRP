@@ -1,5 +1,4 @@
 #include "Project_Qt_Access.h"
-#include "Database.h"
 #include <QDebug>
 #include <QFileDialog>
 
@@ -10,7 +9,7 @@ Project_Qt_Access::Project_Qt_Access(QWidget *parent) : QMainWindow(parent)
 
 void Project_Qt_Access::on_Database_Connection_clicked()
 {
-    AdoAccess db(ui.Database_Path->text().toStdString());
+    db.connect(ui.Database_Path->text().toStdString());
     
     if (db.Connected())
         ui.Database_info->setText("Successfully connected to the database.");
@@ -26,3 +25,4 @@ void Project_Qt_Access::on_Select_Database_clicked()
     ui.Database_info->setText("");
     ui.Database_Path->setText(FileName);
 }
+
