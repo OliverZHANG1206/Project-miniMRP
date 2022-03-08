@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/Project_Qt_Access">
+        <file>DataLib.accdb</file>
+    </qresource>
+</RCC>
