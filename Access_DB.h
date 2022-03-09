@@ -20,6 +20,7 @@ class AdoAccess
 		bool Connected();
 		void connect(string);
 		void select_table(CString);
+		QStringList show_table();
 		void append_item(string[]);
 		QString show_item(CString);
 		void quitconnection();

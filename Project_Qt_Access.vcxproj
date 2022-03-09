@@ -156,6 +156,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Subwindow_Delete.cpp" />
     <QtRcc Include="Project_Qt_Access.qrc" />
     <QtUic Include="Project_Qt_Access.ui" />
     <QtMoc Include="Project_Qt_Access.h" />
@@ -164,9 +165,11 @@
     <ClCompile Include="main.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <QtUic Include="Subwindow_Delete.ui" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Access_DB.h" />
+    <QtMoc Include="Subwindow_Delete.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

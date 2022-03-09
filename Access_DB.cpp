@@ -64,3 +64,22 @@ void AdoAccess::append_item(string s[])
 {
 	
 }
+
+QStringList AdoAccess::show_table()
+{
+	QStringList table_list;
+	table_list << "<Select>";
+	HX_pRecordset = HX_pConnection->OpenSchema(adSchemaTables);
+	while (!HX_pRecordset->AdoNSEOF)
+	{
+		_bstr_t tblname = HX_pRecordset->Fields->GetItem("TABLE_NAME")->Value;
+		_bstr_t tbltype = HX_pRecordset->Fields->GetItem("TABLE_TYPE")->Value;
+		if (!strcmp(tbltype, "TABLE"))
+		{
+			string str = (char*)tblname;
+			table_list << QString::fromStdString(str);
+		}
+		HX_pRecordset->MoveNext();
+	}
+	return table_list;
+}
